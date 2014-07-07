@@ -15,12 +15,12 @@ public class Job implements Comparable<Job>{
     /**
      * job weight 
      */
-    private int weight;
+    private int _weight;
     
     /**
      * job length
      */
-    private int length;
+    private int _length;
     
     /**
      * Job weight getter
@@ -29,7 +29,7 @@ public class Job implements Comparable<Job>{
      */
     public int weight()
     {
-        return this.weight;
+        return this._weight;
     }
     
     /**
@@ -38,18 +38,18 @@ public class Job implements Comparable<Job>{
      * @return int
      */
     public int length() {
-        return this.length;
+        return this._length;
     }
     
     public Job(int w, int l)
     {
-        this.weight = w;
-        this.length = l;
+        this._weight = w;
+        this._length = l;
     }
     
     public int character()
     {
-        return this.weight - this.length;
+        return this._weight - this._length;
     }
     
     public int compareTo(Job j){
