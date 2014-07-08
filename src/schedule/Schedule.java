@@ -16,7 +16,6 @@ import java.util.Set;
  */
 public class Schedule {
 
-    private HashMap<Integer, Set<Integer>> _edgesOut;
     
     /**
      * @param args the command line arguments
