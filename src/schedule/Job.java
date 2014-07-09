@@ -65,6 +65,27 @@ public class Job implements Comparable<Job>{
         return 1;
     }
     
+    public double frac()
+    {
+       return (double) this.weight()/this.length(); 
+    }
+    
+    public int compareToFraction(Job j){
+        double fr1 = this.frac();
+        double fr2 = j.frac();
+        if (fr1 > fr2){
+            return -1;
+        }
+        if (fr1 < fr2) {
+            return 1;
+        }
+        return 0;
+    }
+    
+    public String show()
+    {
+        return "weight: " + this.weight() + ", length: " + this.length() + ", character: " + this.character() + ", fraction: " + this.frac();
+    }
     public static void main(String[] args)
     {
     }
