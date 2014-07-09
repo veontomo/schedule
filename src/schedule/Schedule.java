@@ -19,7 +19,7 @@ public class Schedule {
     /**
      * An object store job instance inside the schedule
      */
-    public class JobCard
+    public class JobCard implements Comparable<JobCard>
     {
         /**
          * job to schedule
@@ -54,10 +54,16 @@ public class Schedule {
             this._completionTime = t;
         }
         
+        public int compareTo(JobCard jc)
+        {
+            return this.job().compareTo(jc.job());
+        }
+        
         
     }
     
     private JobCard[] _schedule;
+    
     
     /**
      * Schedules the job
@@ -67,6 +73,7 @@ public class Schedule {
     {
         /// !!! stub
     }
+    
     
     /**
      * Returns position of the job among the schedule in case it is to be scheduled.
